@@ -29,9 +29,9 @@ public enum CarType {
         return typeValueString;
     }
 
-    public static CarType fromType(int number) {
+    public static CarType fromType(String inputValue) {
         for (CarType carType : CarType.values()) {
-            if (carType.getTypeSelectionNumber() == number) {
+            if (carType.getTypeValueString().equalsIgnoreCase(inputValue)) {
                 return carType;
             }
         }

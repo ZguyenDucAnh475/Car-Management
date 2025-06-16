@@ -19,6 +19,9 @@ public enum DaySellCar {
     private int[] daySellCars;
     private CarType carType;
 
+    DaySellCar() {
+    }
+
     private DaySellCar(int[] daySellCars, CarType carType) {
         this.daySellCars = daySellCars;
         this.carType = carType;
@@ -32,19 +35,6 @@ public enum DaySellCar {
         return carType;
     }
 
-    public List<String> getValueIndex(CarType carType) {
-        List<String> getDayStrings = new ArrayList<>();
-        if (getCarType().equals(carType)) {
-            for (int i = 0; i < daySellCars.length; i++) {
-                for (Days day : Days.values()) {
-                    if (daySellCars[i] == day.getTypeSelectionNumber()) {
-                        getDayStrings.add(day.getTypeValueString());
-                        break;
-                    }
-                }
-            }
-        }
-        return getDayStrings;
-    }
 
+    
 }

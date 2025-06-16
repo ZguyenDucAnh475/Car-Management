@@ -18,6 +18,7 @@ public class Main {
     private void run() {
         // demo add: COMMENT level 2
         carController.getView();
+        carController.run();
     }
 
     /**
